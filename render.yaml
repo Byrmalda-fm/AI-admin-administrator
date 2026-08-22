@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: minecraft-ai-admin-bot
+    runtime: python
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    autoDeploy: true
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ALLOWED_USER_ID
+        sync: false
+      - key: SFTP_HOST
+        sync: false
+      - key: SFTP_USER
+        sync: false
+      - key: SFTP_PORT
+        value: "22"
+      - key: SSH_PRIVATE_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: "llama-3.3-70b-versatile"
+      - key: ADDON_MAX_DOWNLOAD_MB
+        value: "300"
+      - key: PYTHON_VERSION
+        value: "3.13.0"

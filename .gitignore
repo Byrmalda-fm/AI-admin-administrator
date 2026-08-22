@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+minecraft_ai_admin/runtime_config.json
+minecraft_ai_admin/memory.json
+.venv/

@@ -1,0 +1,4 @@
+groq>=0.31.0
+paramiko>=3.5.1
+pyTelegramBotAPI>=4.29.1
+requests>=2.31.0
